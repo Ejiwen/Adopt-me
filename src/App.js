@@ -8,9 +8,11 @@ import ThemeContext from "./ThemeContext";
 const App = () => {
   const ThemeHook = useState("darkblue");
 
+  document.body.style.background = ThemeHook[0];
+
   return (
     <ThemeContext.Provider value={ThemeHook}>
-      <div>
+      <div style={{ backgroundColor: ThemeHook[0] }}>
         <header>
           {" "}
           <Link to="/"> Adopt Me! </Link>{" "}
